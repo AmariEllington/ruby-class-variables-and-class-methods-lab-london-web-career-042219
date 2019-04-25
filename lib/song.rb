@@ -34,8 +34,8 @@ def self.artists
 end
 
 def self.genre_count
-  @@genre_amount.group_by{ |v| v }.map{ |k, v| [k, v.size] }
-  @@genre_amount
+  @@genre_amount.group_by{ |v| v }.map{ |k, v| [k, v.count] }
+  @@genre_amount << v.count
 
 end
 #def self.genre_count
