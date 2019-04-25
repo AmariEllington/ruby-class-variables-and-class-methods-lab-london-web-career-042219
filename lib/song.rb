@@ -9,6 +9,7 @@ class Song
 
 @@genres = []
 @@artists = []
+@@genre_amount = []
 def initialize(name, artist, genre)
   @name = name
   @artist = artist
@@ -16,6 +17,7 @@ def initialize(name, artist, genre)
   @@count += 1
   @@genres << genre
   @@artists << artist
+  @@genre_amount << genre
 end
 
 def self.count
@@ -32,7 +34,7 @@ def self.artists
 end
 
 def self.genre_count
-  @@genres.each do |genre, genre_count|
+  @@genre_amount.group_by{ |v| v }.map{ |k, v| [k, v.size] }
 end
 end
 #def self.genre_count
