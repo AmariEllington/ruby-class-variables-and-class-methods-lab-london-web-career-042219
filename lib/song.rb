@@ -9,7 +9,7 @@ class Song
 
 @@genres = []
 @@artists = []
-@@genre_amount = []
+
 def initialize(name, artist, genre)
   @name = name
   @artist = artist
@@ -17,7 +17,7 @@ def initialize(name, artist, genre)
   @@count += 1
   @@genres << genre
   @@artists << artist
-  @@genre_amount << genre
+  
 end
 
 def self.count
@@ -34,14 +34,7 @@ def self.artists
 end
 
 def self.genre_count
-  @@genre_amount.uniq.count
-  @@genre_amount << v.count
-
+@@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
 end
-#def self.genre_count
-#  genre_count = {}
-#  @@genres.group_by{ |v| v }.map{ |k, v| [k, v.size] }
-
-#end
 #binding.pry
 end
