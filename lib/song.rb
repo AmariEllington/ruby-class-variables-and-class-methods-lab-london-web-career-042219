@@ -43,5 +43,5 @@ end
 #  @@genres.group_by{ |v| v }.map{ |k, v| [k, v.size] }
 
 #end
-binding.pry
+#binding.pry
 end
