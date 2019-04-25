@@ -34,6 +34,7 @@ end
 def self.genre_count
   @@genres.each do |genre, genre_count|
 end
+end
 #def self.genre_count
 #  genre_count = {}
 #  @@genres.group_by{ |v| v }.map{ |k, v| [k, v.size] }
