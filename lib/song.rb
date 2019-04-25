@@ -30,10 +30,14 @@ def self.artist
  @@artists
 end
 
-def self.genre_count
-  genre_count = {}
-  @@genres.group_by{ |v| v }.map{ |k, v| [k, v.size] }
-
+def artists
+  @@artists
 end
+
+#def self.genre_count
+#  genre_count = {}
+#  @@genres.group_by{ |v| v }.map{ |k, v| [k, v.size] }
+
+#end
 #binding.pry
 end
