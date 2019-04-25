@@ -26,9 +26,7 @@ def self.genres
   @@genres
 end
 
-def self.artist
- @@artists
-end
+
 
 def self.artists
   @@artists.uniq
