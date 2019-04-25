@@ -34,7 +34,7 @@ def self.artists
 end
 
 def self.genre_count
-  @@genre_amount.group_by{ |v| v }.map{ |k, v| [k, v] }
+  @@genre_amount.uniq.count
   @@genre_amount << v.count
 
 end
