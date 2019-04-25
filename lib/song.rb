@@ -30,7 +30,7 @@ def self.artist
  @@artists
 end
 
-def artists
+def self.artists
   @@artists.uniq
 end
 
