@@ -35,6 +35,7 @@ end
 
 def self.genre_count
   @@genre_amount.group_by{ |v| v }.map{ |k, v| [k, v.size] }
+  @@genre_amount
 end
 end
 #def self.genre_count
